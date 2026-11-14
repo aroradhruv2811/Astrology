@@ -256,6 +256,25 @@ summary:focus-visible {
   text-shadow: 0 1px 8px rgba(8, 14, 32, 0.6);
 }
 
+.celestial-art {
+  display: block;
+  width: min(560px, 94%);
+  height: auto;
+  margin: 30px auto 0;
+  animation: celestial-float 7s ease-in-out infinite;
+}
+
+@keyframes celestial-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celestial-art {
+    animation: none;
+  }
+}
+
 /* Trust strip */
 .trust-strip {
   background: var(--wash);
