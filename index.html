@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ask the Stars — daily horoscopes, zodiac sign readings, and a place to ask your astrology questions." />
-  <title>Ask the Stars — Astrology &amp; Daily Horoscopes</title>
+  <meta name="description" content="Ask the Stars — personal astrology consultations, daily, weekly and monthly horoscopes, birth chart and kundali calculators, moon phases, and Mercury retrograde dates." />
+  <title>Ask the Stars — Personal Astrology Consultations &amp; Horoscopes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -22,7 +22,11 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#horoscope">Horoscopes</a>
         <a href="#zodiac">Zodiac</a>
-        <a href="#ask">Ask a Question</a>
+        <a href="#calculator">Birth Chart</a>
+        <a href="#kundali">Kundali</a>
+        <a href="#moon">Moon &amp; Mercury</a>
+        <a href="#articles">Articles</a>
+        <a href="#ask">Consultation</a>
         <a href="#faq">FAQ</a>
         <a href="#about">About</a>
       </nav>
@@ -32,29 +36,107 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero" id="top">
-      <div class="stars" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="hero-eyebrow">Daily horoscopes &amp; zodiac readings</p>
+        <p class="hero-eyebrow">Personal astrology consultations</p>
         <h1>Ask the stars</h1>
         <p class="hero-lede">
-          Wondering what the week holds for love, career, or money? Read your
-          sign, check today's horoscope, and ask the question that's on your mind.
+          A personal written answer to the question on your mind — prepared for
+          you, from your own birth details, not pulled from a template.
         </p>
         <div class="hero-actions">
-          <a class="button button-gold" href="#ask">Ask a question</a>
-          <a class="button button-outline" href="#zodiac">Explore your sign</a>
+          <a class="button button-gold" href="#ask">Request a consultation</a>
+          <a class="button button-outline" href="#services">View readings &amp; services</a>
         </div>
         <p class="hero-note">For entertainment and reflection — always trust your own judgment first.</p>
       </div>
     </section>
 
-    <!-- Daily horoscope -->
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="container trust-strip-inner">
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Answers written personally</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Your details stay confidential</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Answered in the order received</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Usually within a few days</p>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <section class="section" id="how" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading">How it works</h2>
+        <p class="section-intro">Three simple steps between your question and a personal answer.</p>
+        <ol class="steps">
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Ask your question</h3>
+            <p>Use the consultation form to share your question, your birth details, and how to reach you.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Your reading is prepared</h3>
+            <p>Your question is read alongside your sign and birth details, and a written reading is prepared for you personally.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Your personal answer is delivered</h3>
+            <p>The answer comes back to you by email — focused on themes, timing, and things to reflect on.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Readings & services -->
+    <section class="section section-alt" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading">Readings &amp; services</h2>
+        <p class="section-intro">Choose the reading that fits your question. Pricing is confirmed personally before any payment.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Single Question</h3>
+            <p>One question, one personal written answer. Share as much or as little context as you like, with your birth details if you want the answer shaped to your chart.</p>
+            <ul>
+              <li>One question, answered in writing</li>
+              <li>Birth details optional</li>
+              <li>Delivered by email, usually within a few days</li>
+            </ul>
+            <a class="button button-gold" href="#ask">Choose this reading</a>
+          </article>
+          <article class="service-card">
+            <h3>A Deeper Reading</h3>
+            <p>A longer written reading that explores one area of your life in depth — love, career, money, health, or whatever matters most right now — drawing on your birth details.</p>
+            <ul>
+              <li>One area of life, explored in depth</li>
+              <li>Uses your birth date, time, and place</li>
+              <li>Delivered by email, usually within a few days</li>
+            </ul>
+            <a class="button button-gold" href="#ask">Choose this reading</a>
+          </article>
+          <article class="service-card">
+            <h3>Birth Chart Reading</h3>
+            <p>A full reading of your birth chart from your date, time, and place of birth — your Sun, Moon, and rising signs and the key placements that shape the chart as a whole.</p>
+            <ul>
+              <li>Full chart, read as a whole</li>
+              <li>Needs your birth date, time, and place</li>
+              <li>Delivered by email, usually within a few days</li>
+            </ul>
+            <a class="button button-gold" href="#ask">Choose this reading</a>
+          </article>
+        </div>
+        <p class="services-note">No payment is taken on this page. When you request a consultation, pricing is confirmed with you personally first.</p>
+      </div>
+    </section>
+
+    <!-- Horoscopes -->
     <section class="section" id="horoscope" aria-labelledby="horoscope-heading">
       <div class="container">
-        <h2 id="horoscope-heading">Today's horoscopes</h2>
-        <p class="section-intro">
-          <span id="today-date">Today</span> — a fresh reading for every sign, updated daily.
-        </p>
+        <h2 id="horoscope-heading">Horoscopes</h2>
+        <p class="section-intro" id="horoscope-period-label">Today — a fresh reading for every sign, updated daily.</p>
+        <div class="period-tabs" role="tablist" aria-label="Horoscope period">
+          <button type="button" class="period-tab" role="tab" data-period="daily" aria-selected="true">Daily</button>
+          <button type="button" class="period-tab" role="tab" data-period="weekly" aria-selected="false">Weekly</button>
+          <button type="button" class="period-tab" role="tab" data-period="monthly" aria-selected="false">Monthly</button>
+        </div>
         <div class="horoscope-grid" id="horoscope-grid">
           <!-- Rendered by app.js -->
         </div>
@@ -72,20 +154,225 @@
       </div>
     </section>
 
-    <!-- Ask a question -->
-    <section class="section" id="ask" aria-labelledby="ask-heading">
+    <!-- Western birth chart calculator -->
+    <section class="section" id="calculator" aria-labelledby="calculator-heading">
       <div class="container narrow">
-        <h2 id="ask-heading">Ask a question</h2>
+        <h2 id="calculator-heading">Birth chart calculator</h2>
         <p class="section-intro">
-          Share a little context and your question. Birth details help make a
-          reading more personal, but everything except the question itself is optional.
+          Find your Sun, Moon, and rising signs from your birth details, using
+          Western (tropical) astrology. The Sun sign is calculated from your
+          birth date; the Moon and rising signs use simplified calculations and
+          are labelled approximate.
+        </p>
+
+        <form id="birth-chart-form" class="calc-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="bc-date">Birth date</label>
+              <input type="date" id="bc-date" name="birthdate" required />
+              <p class="field-error" id="birth-chart-error" hidden>Please enter your birth date.</p>
+            </div>
+            <div class="field">
+              <label for="bc-time">Birth time <span class="optional">(optional — needed for the rising sign)</span></label>
+              <input type="time" id="bc-time" name="birthtime" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="bc-place">Birth place <span class="optional">(optional)</span></label>
+              <input type="text" id="bc-place" name="birthplace" autocomplete="off" placeholder="City, country" />
+            </div>
+            <div class="field">
+              <label for="bc-timezone">Time zone</label>
+              <select id="bc-timezone" name="timezone"></select>
+              <p class="field-hint">Pick the standard or daylight variant that was in force on the birth date.</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="bc-lat">Latitude <span class="optional">(optional — improves the rising sign)</span></label>
+              <input type="number" id="bc-lat" name="latitude" step="any" min="-90" max="90" placeholder="e.g. 28.14" />
+            </div>
+            <div class="field">
+              <label for="bc-lon">Longitude <span class="optional">(optional)</span></label>
+              <input type="number" id="bc-lon" name="longitude" step="any" min="-180" max="180" placeholder="e.g. 77.33" />
+            </div>
+          </div>
+          <button class="button button-gold" type="submit">Calculate my chart</button>
+        </form>
+
+        <div id="birth-chart-result" hidden></div>
+      </div>
+    </section>
+
+    <!-- Kundali generator -->
+    <section class="section section-alt" id="kundali" aria-labelledby="kundali-heading">
+      <div class="container narrow">
+        <h2 id="kundali-heading">Kundali generator</h2>
+        <p class="section-intro">
+          Generate an approximate Vedic birth chart (kundali). Kundali uses
+          sidereal astrology, while the birth chart calculator above uses
+          Western (tropical) astrology, so signs can differ between the two.
+        </p>
+
+        <form id="kundali-form" class="calc-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="kd-date">Date of birth</label>
+              <input type="date" id="kd-date" name="birthdate" required />
+              <p class="field-error" id="kundali-error" hidden>Please enter the date of birth.</p>
+            </div>
+            <div class="field">
+              <label for="kd-time">Time of birth <span class="optional">(needed for the Lagna)</span></label>
+              <input type="time" id="kd-time" name="birthtime" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="kd-place">Place of birth</label>
+              <input type="text" id="kd-place" name="birthplace" autocomplete="off" placeholder="City, country" />
+            </div>
+            <div class="field">
+              <label for="kd-timezone">Time zone</label>
+              <select id="kd-timezone" name="timezone"></select>
+              <p class="field-hint">Pick the standard or daylight variant that was in force on the birth date.</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="kd-lat">Latitude <span class="optional">(optional — improves the Lagna)</span></label>
+              <input type="number" id="kd-lat" name="latitude" step="any" min="-90" max="90" placeholder="e.g. 28.14" />
+            </div>
+            <div class="field">
+              <label for="kd-lon">Longitude <span class="optional">(optional)</span></label>
+              <input type="number" id="kd-lon" name="longitude" step="any" min="-180" max="180" placeholder="e.g. 77.33" />
+            </div>
+          </div>
+          <button class="button button-gold" type="submit">Generate kundali</button>
+          <p class="form-note">
+            Well-known birthplaces are recognised automatically and their real
+            coordinates are used. If a place is not recognised and no
+            coordinates are typed, the Lagna is estimated from the time zone
+            and may be off — the result will say so.
+          </p>
+        </form>
+
+        <div id="kundali-result" hidden></div>
+      </div>
+    </section>
+
+    <!-- Moon phases -->
+    <section class="section" id="moon" aria-labelledby="moon-heading">
+      <div class="container narrow">
+        <h2 id="moon-heading">Moon phases</h2>
+        <p class="section-intro">Tonight's Moon, calculated from the 29.53-day lunar cycle. Approximate — phase times can be off by up to a day.</p>
+        <div class="moon-panel">
+          <div class="moon-visual" id="moon-visual" aria-hidden="true"></div>
+          <div class="moon-details">
+            <p class="moon-phase-name" id="moon-phase-name">—</p>
+            <p id="moon-illumination">—</p>
+            <p id="moon-age">—</p>
+            <p id="moon-next-full">—</p>
+            <p id="moon-next-new">—</p>
+          </div>
+        </div>
+        <h3>Upcoming phases</h3>
+        <ul class="moon-upcoming" id="moon-upcoming"></ul>
+      </div>
+    </section>
+
+    <!-- Mercury retrograde -->
+    <section class="section section-alt" id="mercury" aria-labelledby="mercury-heading">
+      <div class="container narrow">
+        <h2 id="mercury-heading">Mercury retrograde</h2>
+        <p class="section-intro" id="mercury-status">Checking Mercury's current status…</p>
+        <p>
+          A retrograde is the stretch of about three weeks, three or four times
+          a year, when Mercury appears to move backwards against the zodiac as
+          seen from Earth. In astrological tradition it is linked with
+          communication, travel, and technology — a time for review, re-reading,
+          and rethinking rather than rushing. The dates below are in UTC, so
+          your local date can differ by a day near midnight.
+        </p>
+        <div class="table-scroll">
+          <table class="chart-table">
+            <caption>Mercury retrograde dates, 2026–2027</caption>
+            <thead><tr><th>Turns retrograde</th><th>Turns direct</th><th>Signs</th></tr></thead>
+            <tbody id="mercury-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transit articles -->
+    <section class="section" id="articles" aria-labelledby="articles-heading">
+      <div class="container">
+        <h2 id="articles-heading">Understanding transits</h2>
+        <p class="section-intro">Short introductions to the ideas behind the charts — written for reflection, not prediction.</p>
+        <div class="articles-grid">
+          <article class="article-card">
+            <h3>What is a transit?</h3>
+            <p>A transit is the current position of a planet measured against the sky at the moment of your birth. As the planets keep moving, they pass through the signs and houses of your birth chart, and astrologers read those passages as periods with a particular flavour.</p>
+            <p>Fast planets — the Moon, Mercury, Venus — transit quickly, so their effects are read as passing moods and short episodes. Slow planets — Jupiter, Saturn, and beyond — spend months or years in one place, and their transits are read as longer chapters: growth, restructuring, or change.</p>
+          </article>
+          <article class="article-card">
+            <h3>Mercury retrograde explained</h3>
+            <p>Three or four times a year, Mercury appears to move backwards through the zodiac for about three weeks. Nothing actually reverses — it is an apparent effect of Earth's own orbit — but the tradition reads it as a signal to slow down.</p>
+            <p>Mercury rules communication, travel, and agreements, so a retrograde is treated as a good time to review, re-read, and revisit, and a poor time to assume a message was understood. The weeks just before and after — the shadow periods — are read the same way, more gently.</p>
+          </article>
+          <article class="article-card">
+            <h3>Saturn return</h3>
+            <p>Saturn takes about 29.5 years to circle the zodiac, so it returns to the place it held at your birth around the ages of 29, 58, and 87. The first return is the most talked about, and the tradition reads it as a coming-of-age: a period of taking stock, committing, and building structures that last.</p>
+            <p>It is often described as demanding rather than cruel — the questions it raises are about responsibility, direction, and what is worth keeping. The answers tend to shape the decade that follows.</p>
+          </article>
+          <article class="article-card">
+            <h3>Jupiter transits</h3>
+            <p>Jupiter takes about 12 years to circle the zodiac, spending roughly a year in each sign. In the tradition it is the planet of expansion — growth, opportunity, learning, and confidence — so its transits are read as openings: the areas of life where things can grow if you meet them halfway.</p>
+            <p>Because Jupiter moves slowly, its transits are read as themes for a year rather than events on a day. The sign it passes through colours the kind of growth on offer; the house it passes through in your chart shows where.</p>
+          </article>
+          <article class="article-card">
+            <h3>Venus retrograde</h3>
+            <p>Venus turns retrograde roughly every 18 months, for about 40 days. Venus rules love, beauty, money, and what we value, so the tradition reads its retrograde as a time to review relationships and priorities rather than to start something new in those areas.</p>
+            <p>Old connections and unfinished business have a habit of resurfacing. The usual advice in the tradition is to reflect before committing — and to be careful with big purchases and makeovers, which may look different once Venus turns direct again.</p>
+          </article>
+          <article class="article-card">
+            <h3>Full Moon vs New Moon</h3>
+            <p>The New Moon, when the Moon sits between Earth and the Sun, is read as a beginning: a time to set intentions and start things quietly. The Full Moon, about two weeks later, when the Moon is fully lit, is read as a culmination: what was started comes into the open, and results — and feelings — are easier to see.</p>
+            <p>The two weeks between them, the waxing half, are read as building; the two weeks after the Full Moon, the waning half, are read as release and reflection. The whole cycle repeats every 29.5 days.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Request a consultation -->
+    <section class="section section-alt" id="ask" aria-labelledby="ask-heading">
+      <div class="container narrow">
+        <h2 id="ask-heading">Request a consultation</h2>
+        <p class="section-intro">
+          Tell us about yourself and your question. Pricing is confirmed with
+          you personally before any payment, and a reply will be sent to your
+          email address.
         </p>
 
         <form id="question-form" novalidate>
           <div class="form-row">
             <div class="field">
-              <label for="q-name">Name <span class="optional">(optional)</span></label>
-              <input type="text" id="q-name" name="name" autocomplete="name" placeholder="Your name" />
+              <label for="q-name">Name</label>
+              <input type="text" id="q-name" name="name" autocomplete="name" placeholder="Your name" required />
+              <p class="field-error" id="name-error" hidden>Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="q-email">Email</label>
+              <input type="email" id="q-email" name="email" autocomplete="email" placeholder="you@example.com" required />
+              <p class="field-error" id="email-error" hidden>Please enter a valid email address.</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="q-phone">Phone number <span class="optional">(optional)</span></label>
+              <input type="tel" id="q-phone" name="phone" autocomplete="tel" placeholder="+1 555 123 4567" />
+              <p class="field-error" id="phone-error" hidden>Please enter a valid phone number (digits, spaces, + and dashes only).</p>
             </div>
             <div class="field">
               <label for="q-category">Category</label>
@@ -115,22 +402,23 @@
           </div>
 
           <div class="field">
-            <label for="q-question">Your question</label>
+            <label for="q-question">Describe your situation or question</label>
             <textarea id="q-question" name="question" rows="4" required
-              placeholder="What would you like the stars to weigh in on?"></textarea>
-            <p class="field-error" id="question-error" hidden>Please write your question before sending.</p>
+              placeholder="What would you like the reading to focus on? Share as much context as feels right."></textarea>
+            <p class="field-error" id="question-error" hidden>Please describe your situation or question.</p>
           </div>
 
-          <button class="button button-gold" type="submit">Send my question</button>
+          <button class="button button-gold" type="submit">Send my consultation request</button>
           <p class="form-note">
-            In this standalone version, your questions are saved in your own browser only,
-            so they stay on this device. Please don't include passwords or sensitive personal details.
+            In this standalone version, your request is saved in your own browser only,
+            so it stays on this device and is not sent anywhere. Please don't include
+            passwords or sensitive personal details.
           </p>
         </form>
 
         <div class="confirmation" id="confirmation" hidden role="status">
-          <p><strong>Your question is with the stars.</strong> <span id="confirmation-ref"></span></p>
-          <p>It has been saved in your browser. Check the list below to review what you've asked.</p>
+          <p><strong>Your consultation request has been received.</strong> <span id="confirmation-ref"></span></p>
+          <p>A reply will be sent to <span id="confirmation-email"></span> — pricing is confirmed with you personally first, and answers usually arrive within a few days.</p>
         </div>
 
         <div class="my-questions" id="my-questions" hidden>
@@ -142,22 +430,30 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
+    <section class="section" id="faq" aria-labelledby="faq-heading">
       <div class="container narrow">
         <h2 id="faq-heading">Questions &amp; answers</h2>
         <div class="faq-list">
           <details class="faq-item">
-            <summary>How are questions answered?</summary>
+            <summary>How are consultations answered?</summary>
             <p>
-              Each question is read alongside the asker's sign and birth details, when shared,
+              Each request is read alongside the asker's sign and birth details, when shared,
               and answered with a short written reading. Answers focus on themes, timing,
               and things to reflect on — not predictions set in stone.
             </p>
           </details>
           <details class="faq-item">
+            <summary>How does payment work?</summary>
+            <p>
+              Pricing is confirmed with you personally before any payment. No payment is
+              taken on this page — when you request a consultation, you will hear back
+              with the price for the reading you chose before anything is charged.
+            </p>
+          </details>
+          <details class="faq-item">
             <summary>How long does an answer take?</summary>
             <p>
-              Questions are answered in the order they arrive, usually within a few days.
+              Requests are answered in the order they arrive, usually within a few days.
               Complex questions may take a little longer.
             </p>
           </details>
@@ -185,30 +481,52 @@
               and place can pin it down more precisely.
             </p>
           </details>
+          <details class="faq-item">
+            <summary>What is the difference between the birth chart calculator and the kundali?</summary>
+            <p>
+              The birth chart calculator uses Western (tropical) astrology, and the
+              kundali uses Vedic (sidereal) astrology. The two systems measure the
+              zodiac from different starting points, so the same birth details can give
+              different signs in each. Both are offered here, and both are approximate.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>How accurate are the calculators?</summary>
+            <p>
+              They use simplified astronomical calculations, so results are approximate
+              and labelled as such. Bodies near a sign or nakshatra boundary can flip
+              to the neighbouring sign. A professional reading uses precise ephemeris
+              data and your exact birth time.
+            </p>
+          </details>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="section" id="about" aria-labelledby="about-heading">
+    <section class="section section-alt" id="about" aria-labelledby="about-heading">
       <div class="container narrow">
         <h2 id="about-heading">About Ask the Stars</h2>
-        <p>
-          Ask the Stars is a small corner of the internet for people who like to
-          pause, look up, and wonder. It offers daily horoscopes, short zodiac
-          readings, and a place to ask the questions that horoscopes alone
-          don't answer.
-        </p>
-        <p>
-          Astrology has been practiced for thousands of years as a way of
-          telling stories about timing, character, and change. We keep that
-          spirit: thoughtful, curious, and honest about what a reading can and
-          cannot do.
-        </p>
-        <p>
-          To get in touch, use the ask-a-question form above — it reaches the
-          same place your questions do.
-        </p>
+        <div class="about-panel">
+          <p>
+            Ask the Stars is a small corner of the internet for people who like to
+            pause, look up, and wonder. It offers daily, weekly, and monthly
+            horoscopes, birth chart and kundali calculators, moon phases, and a
+            place to ask the questions that horoscopes alone don't answer — with
+            personal written consultations for those who want a reading shaped
+            to their own chart.
+          </p>
+          <p>
+            Astrology has been practiced for thousands of years as a way of
+            telling stories about timing, character, and change. We keep that
+            spirit: thoughtful, curious, and honest about what a reading can and
+            cannot do.
+          </p>
+          <p>
+            To get in touch, use the consultation form above — it reaches the
+            same place your questions do.
+          </p>
+        </div>
       </div>
     </section>
   </main>

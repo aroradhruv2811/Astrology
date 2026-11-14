@@ -1,4 +1,6 @@
-/* Ask the Stars — celestial dark navy & gold, mobile-first */
+/* Ask the Stars — lighter night-sky theme: sky-blue gradient, stars and
+   soft clouds across the whole page (CSS only), with gold accents.
+   Content sits on solid dark surfaces so text stays readable. */
 
 :root {
   --navy-950: #060a18;
@@ -10,10 +12,11 @@
   --gold-500: #d4af37;
   --gold-600: #b8962a;
   --cream: #f6f1e5;
-  --muted: #b9c0d4;
-  --muted-dark: #8d94ab;
-  --card: #111a38;
-  --card-border: #26355f;
+  --muted: #c3c9dd;
+  --muted-dark: #a7aec4;
+  --card: #0f1936;
+  --card-border: #2a3a68;
+  --wash: rgba(8, 14, 32, 0.58);
   --radius: 14px;
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -31,11 +34,49 @@ html {
 
 body {
   margin: 0;
-  background: var(--navy-900);
   color: var(--cream);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
+  background-color: #3f639b;
+  background-image:
+    /* stars */
+    radial-gradient(1.5px 1.5px at 6% 10%, #ffffff, transparent),
+    radial-gradient(1px 1px at 18% 26%, #ffe9a8, transparent),
+    radial-gradient(2px 2px at 30% 8%, #ffffff, transparent),
+    radial-gradient(1px 1px at 44% 20%, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 57% 6%, #ffe9a8, transparent),
+    radial-gradient(1px 1px at 70% 16%, #ffffff, transparent),
+    radial-gradient(2px 2px at 84% 9%, #ffffff, transparent),
+    radial-gradient(1px 1px at 93% 24%, #ffe9a8, transparent),
+    radial-gradient(1.5px 1.5px at 12% 46%, #ffffff, transparent),
+    radial-gradient(1px 1px at 26% 58%, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 40% 42%, #ffe9a8, transparent),
+    radial-gradient(1px 1px at 52% 60%, #ffffff, transparent),
+    radial-gradient(2px 2px at 66% 48%, #ffffff, transparent),
+    radial-gradient(1px 1px at 78% 58%, #ffe9a8, transparent),
+    radial-gradient(1.5px 1.5px at 90% 44%, #ffffff, transparent),
+    radial-gradient(1px 1px at 8% 74%, #ffe9a8, transparent),
+    radial-gradient(1.5px 1.5px at 22% 86%, #ffffff, transparent),
+    radial-gradient(1px 1px at 36% 72%, #ffffff, transparent),
+    radial-gradient(2px 2px at 50% 88%, #ffe9a8, transparent),
+    radial-gradient(1px 1px at 64% 76%, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 76% 90%, #ffffff, transparent),
+    radial-gradient(1px 1px at 88% 72%, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 96% 90%, #ffe9a8, transparent),
+    radial-gradient(2.5px 2.5px at 33% 34%, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(2.5px 2.5px at 74% 30%, rgba(255, 233, 168, 0.95), transparent),
+    /* soft moonlight glow */
+    radial-gradient(ellipse 60% 28% at 50% 0%, rgba(232, 199, 102, 0.14), transparent 70%),
+    /* soft clouds */
+    radial-gradient(ellipse 430px 110px at 12% 16%, rgba(255, 255, 255, 0.13), transparent 70%),
+    radial-gradient(ellipse 520px 130px at 82% 30%, rgba(255, 255, 255, 0.11), transparent 70%),
+    radial-gradient(ellipse 380px 100px at 62% 55%, rgba(190, 208, 236, 0.12), transparent 70%),
+    radial-gradient(ellipse 480px 120px at 22% 68%, rgba(255, 255, 255, 0.10), transparent 70%),
+    radial-gradient(ellipse 400px 100px at 88% 84%, rgba(190, 208, 236, 0.10), transparent 70%),
+    /* sky */
+    linear-gradient(180deg, #2b4a7e 0%, #3f639b 48%, #5d84b6 100%);
+  background-attachment: fixed;
 }
 
 h1,
@@ -49,6 +90,7 @@ h3 {
 h2 {
   font-size: 1.9rem;
   color: var(--gold-400);
+  text-shadow: 0 1px 10px rgba(8, 14, 32, 0.55);
 }
 
 a {
@@ -98,7 +140,7 @@ summary:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(6, 10, 24, 0.92);
+  background: rgba(6, 10, 24, 0.88);
   border-bottom: 1px solid var(--navy-600);
   backdrop-filter: blur(6px);
 }
@@ -160,31 +202,9 @@ summary:focus-visible {
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding: 72px 0 64px;
+  padding: 72px 0 56px;
   background:
-    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(212, 175, 55, 0.22), transparent 60%),
-    radial-gradient(ellipse 60% 45% at 85% 20%, rgba(90, 110, 200, 0.25), transparent 60%),
-    linear-gradient(180deg, var(--navy-950), var(--navy-900));
-}
-
-.stars {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(1.5px 1.5px at 12% 28%, #fff, transparent),
-    radial-gradient(1px 1px at 28% 12%, #ffe9a8, transparent),
-    radial-gradient(2px 2px at 44% 34%, #fff, transparent),
-    radial-gradient(1px 1px at 61% 18%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 76% 30%, #ffe9a8, transparent),
-    radial-gradient(1px 1px at 88% 14%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 20% 62%, #fff, transparent),
-    radial-gradient(1px 1px at 38% 72%, #ffe9a8, transparent),
-    radial-gradient(2px 2px at 55% 58%, #fff, transparent),
-    radial-gradient(1px 1px at 70% 68%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 90% 60%, #ffe9a8, transparent),
-    radial-gradient(1px 1px at 6% 48%, #fff, transparent);
-  opacity: 0.8;
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(232, 199, 102, 0.16), transparent 65%);
 }
 
 .hero-inner {
@@ -198,18 +218,21 @@ summary:focus-visible {
   letter-spacing: 0.18em;
   font-size: 0.78rem;
   font-weight: 600;
+  text-shadow: 0 1px 8px rgba(8, 14, 32, 0.6);
 }
 
 .hero h1 {
   font-size: clamp(2.6rem, 8vw, 4.2rem);
   margin-bottom: 16px;
+  text-shadow: 0 2px 14px rgba(8, 14, 32, 0.6);
 }
 
 .hero-lede {
   max-width: 620px;
   margin: 0 auto 28px;
-  color: var(--muted);
+  color: var(--cream);
   font-size: 1.08rem;
+  text-shadow: 0 1px 8px rgba(8, 14, 32, 0.6);
 }
 
 .hero-actions {
@@ -222,8 +245,36 @@ summary:focus-visible {
 
 .hero-note {
   margin: 0;
-  color: var(--muted-dark);
+  color: var(--muted);
   font-size: 0.88rem;
+  text-shadow: 0 1px 8px rgba(8, 14, 32, 0.6);
+}
+
+/* Trust strip */
+.trust-strip {
+  background: var(--wash);
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.trust-strip-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.trust-strip-inner p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.trust-icon {
+  color: var(--gold-500);
+  margin-right: 6px;
 }
 
 /* Buttons */
@@ -256,13 +307,13 @@ summary:focus-visible {
 }
 
 .button-outline {
-  background: transparent;
+  background: rgba(6, 10, 24, 0.45);
   color: var(--cream);
-  border-color: var(--navy-600);
+  border-color: var(--gold-500);
 }
 
 .button-outline:hover {
-  border-color: var(--gold-500);
+  border-color: var(--gold-400);
   color: var(--gold-400);
 }
 
@@ -286,15 +337,138 @@ summary:focus-visible {
 }
 
 .section-alt {
-  background: var(--navy-950);
-  border-top: 1px solid var(--navy-800);
-  border-bottom: 1px solid var(--navy-800);
+  background: var(--wash);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .section-intro {
-  color: var(--muted);
+  color: var(--cream);
   margin: 0 0 28px;
   max-width: 640px;
+  text-shadow: 0 1px 8px rgba(8, 14, 32, 0.55);
+}
+
+.section-alt .section-intro {
+  text-shadow: none;
+}
+
+/* How it works */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  counter-reset: step;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.step-number {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--gold-500);
+  color: var(--navy-950);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: var(--gold-400);
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+}
+
+.service-card ul {
+  margin: 0 0 18px;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.service-card li {
+  margin-bottom: 6px;
+}
+
+.service-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.services-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Period tabs */
+.period-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.period-tab {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-600);
+  background: rgba(6, 10, 24, 0.5);
+  color: var(--cream);
+  cursor: pointer;
+}
+
+.period-tab[aria-selected="true"] {
+  background: var(--gold-500);
+  color: var(--navy-950);
+  border-color: var(--gold-500);
 }
 
 /* Horoscope cards */
@@ -396,8 +570,9 @@ summary:focus-visible {
   font-size: 0.82rem;
 }
 
-/* Form */
-#question-form {
+/* Forms */
+#question-form,
+.calc-form {
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
@@ -440,8 +615,8 @@ summary:focus-visible {
   font: inherit;
   font-size: 0.95rem;
   color: var(--cream);
-  background: var(--navy-800);
-  border: 1px solid var(--navy-600);
+  background: #0b142e;
+  border: 1px solid #33477a;
   border-radius: 10px;
   padding: 10px 12px;
 }
@@ -454,6 +629,12 @@ summary:focus-visible {
 .field input::placeholder,
 .field textarea::placeholder {
   color: var(--muted-dark);
+}
+
+.field-hint {
+  color: var(--muted-dark);
+  font-size: 0.82rem;
+  margin: 6px 0 0;
 }
 
 .field-error {
@@ -469,7 +650,7 @@ summary:focus-visible {
 }
 
 .confirmation {
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 55, 0.16);
   border: 1px solid var(--gold-600);
   border-radius: var(--radius);
   padding: 16px 18px;
@@ -516,6 +697,333 @@ summary:focus-visible {
 .my-questions .q-text {
   margin: 0;
   color: var(--cream);
+}
+
+/* Calculator results */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.result-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.result-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold-400);
+  margin: 0 0 8px;
+}
+
+.result-card p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.result-card p:last-child {
+  margin-bottom: 0;
+}
+
+.result-big {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--cream);
+}
+
+.result-note {
+  font-size: 0.85rem;
+  color: var(--muted-dark);
+}
+
+.approx-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--navy-950);
+  background: var(--gold-500);
+  border-radius: 999px;
+  padding: 2px 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.coord-note,
+.calc-disclaimer {
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: rgba(6, 10, 24, 0.5);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.calc-disclaimer {
+  margin-top: 14px;
+}
+
+/* Tables */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
+.chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+
+.chart-table caption {
+  text-align: left;
+  color: var(--muted-dark);
+  font-size: 0.85rem;
+  padding: 10px 12px 6px;
+  background: var(--card);
+}
+
+.chart-table th,
+.chart-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-top: 1px solid var(--card-border);
+  white-space: nowrap;
+}
+
+.chart-table thead th {
+  color: var(--gold-400);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-top: none;
+}
+
+.chart-table td {
+  color: var(--muted);
+}
+
+.chart-table td:first-child {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.dasha-heading {
+  font-size: 1.2rem;
+  color: var(--gold-400);
+  margin: 22px 0 10px;
+}
+
+.dasha-current td {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--cream);
+}
+
+/* Kundali chart */
+.chart-wrap {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.kundali-chart {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.chart-frame {
+  fill: #0b142e;
+  stroke: var(--gold-600);
+  stroke-width: 2;
+}
+
+.chart-line,
+.chart-diamond {
+  fill: none;
+  stroke: var(--gold-600);
+  stroke-width: 1.2;
+}
+
+.chart-sign-number {
+  fill: var(--gold-400);
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.chart-planet {
+  fill: var(--cream);
+  font-size: 13px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.chart-asc {
+  fill: var(--gold-400);
+  font-weight: 700;
+}
+
+.chart-caption {
+  color: var(--muted-dark);
+  font-size: 0.85rem;
+  margin: 12px 0 0;
+  text-align: left;
+}
+
+/* Moon phases */
+.moon-panel {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.moon-visual {
+  flex-shrink: 0;
+}
+
+.moon-svg {
+  width: 110px;
+  height: 110px;
+  display: block;
+}
+
+.moon-dark {
+  fill: #233156;
+  stroke: var(--gold-600);
+  stroke-width: 1.5;
+}
+
+.moon-lit {
+  fill: var(--gold-400);
+}
+
+.moon-details p {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.moon-details p:last-child {
+  margin-bottom: 0;
+}
+
+.moon-phase-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--cream);
+}
+
+#moon h3 {
+  font-size: 1.2rem;
+  color: var(--gold-400);
+  text-shadow: 0 1px 8px rgba(8, 14, 32, 0.55);
+}
+
+.moon-upcoming {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.moon-upcoming li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+
+.moon-upcoming li span:first-child {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.moon-upcoming li span:last-child {
+  color: var(--muted-dark);
+  white-space: nowrap;
+}
+
+/* Mercury section */
+#mercury p {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+#mercury-status strong {
+  color: var(--cream);
+}
+
+/* Articles */
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.article-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.article-card h3 {
+  font-size: 1.25rem;
+  color: var(--gold-400);
+}
+
+.article-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.article-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* About */
+.about-panel {
+  background: var(--wash);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.about-panel p {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.about-panel p:last-child {
+  margin-bottom: 0;
 }
 
 /* FAQ */
@@ -663,7 +1171,8 @@ summary:focus-visible {
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid var(--navy-800);
+  background: rgba(6, 10, 24, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 32px 0 40px;
   color: var(--muted);
   font-size: 0.92rem;
@@ -694,6 +1203,26 @@ summary:focus-visible {
 
   .form-row:has(> :nth-child(3)) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .trust-strip-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
