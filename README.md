@@ -75,10 +75,13 @@ branch) and share the resulting link.
 
 ## A note on the consultation form
 
-In this standalone version, submitted requests are saved in the visitor's own
-browser (local storage), so they stay on that device and are not sent anywhere.
-A future version with a server could collect requests centrally, notify the
-owner by email, and show them in an inbox for answering.
+When hosted on Netlify, submitted requests are sent through Netlify Forms:
+each submission is stored in the site's Netlify dashboard and, once an email
+notification is configured there, forwarded to the owner's email address. A
+copy is also kept in the visitor's own browser (local storage) so they can
+see their requests on that device. When the site is opened anywhere else
+(for example from a local file), the send step cannot run and the form asks
+the visitor to try again.
 
 ## Approximation notes
 

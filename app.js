@@ -1140,7 +1140,7 @@ function renderMercury() {
   }).join("");
 }
 
-/* ---------- Request a consultation (browser-local storage) ---------- */
+/* ---------- Request a consultation (Netlify Forms + browser-local copy) ---------- */
 
 function loadQuestions() {
   try {
@@ -1214,28 +1214,50 @@ function initConsultationForm() {
       return;
     }
 
-    const questions = loadQuestions();
-    const ref = questions.length + 1;
-    questions.push({
-      ref: ref,
-      name: nameInput.value.trim(),
-      email: email,
-      phone: phone,
-      category: document.getElementById("q-category").value,
-      birthdate: document.getElementById("q-birthdate").value,
-      birthtime: document.getElementById("q-birthtime").value,
-      birthplace: document.getElementById("q-birthplace").value.trim(),
-      description: description,
-      askedAt: new Date().toISOString()
-    });
-    saveQuestions(questions);
+    const submitButton = form.querySelector("button[type='submit']");
+    const submitError = document.getElementById("submit-error");
+    submitError.hidden = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
 
-    document.getElementById("confirmation-ref").textContent = "Reference #" + ref + ".";
-    document.getElementById("confirmation-email").textContent = email;
-    confirmation.hidden = false;
-    confirmation.scrollIntoView({ behavior: "smooth", block: "center" });
-    form.reset();
-    renderMyQuestions();
+    /* Send the request to the site owner via Netlify Forms (the form is
+       detected from the static HTML at deploy time). A copy is also kept
+       in the visitor's own browser so they can see their requests. */
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (response) {
+      if (!response.ok) throw new Error("Submission failed");
+      const questions = loadQuestions();
+      const ref = questions.length + 1;
+      questions.push({
+        ref: ref,
+        name: nameInput.value.trim(),
+        email: email,
+        phone: phone,
+        category: document.getElementById("q-category").value,
+        birthdate: document.getElementById("q-birthdate").value,
+        birthtime: document.getElementById("q-birthtime").value,
+        birthplace: document.getElementById("q-birthplace").value.trim(),
+        description: description,
+        askedAt: new Date().toISOString()
+      });
+      saveQuestions(questions);
+
+      document.getElementById("confirmation-ref").textContent = "Reference #" + ref + ".";
+      document.getElementById("confirmation-email").textContent = email;
+      confirmation.hidden = false;
+      confirmation.scrollIntoView({ behavior: "smooth", block: "center" });
+      form.reset();
+      renderMyQuestions();
+    }).catch(function () {
+      submitError.hidden = false;
+      submitError.scrollIntoView({ behavior: "smooth", block: "center" });
+    }).finally(function () {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send my consultation request";
+    });
   });
 
   document.getElementById("clear-questions").addEventListener("click", function () {

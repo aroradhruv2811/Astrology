@@ -396,7 +396,11 @@
           email address.
         </p>
 
-        <form id="question-form" novalidate>
+        <form id="question-form" name="consultation" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="consultation" />
+          <p hidden>
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" /></label>
+          </p>
           <div class="form-row">
             <div class="field">
               <label for="q-name">Name</label>
@@ -451,9 +455,10 @@
           </div>
 
           <button class="button button-gold" type="submit">Send my consultation request</button>
+          <p class="field-error" id="submit-error" hidden>Sorry, your request could not be sent. Please check your connection and try again.</p>
           <p class="form-note">
-            In this standalone version, your request is saved in your own browser only,
-            so it stays on this device and is not sent anywhere. Please don't include
+            Your request is sent to the astrologer, and a copy is kept in your
+            browser so you can see your requests on this device. Please don't include
             passwords or sensitive personal details.
           </p>
         </form>
