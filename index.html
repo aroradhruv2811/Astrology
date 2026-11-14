@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ask the Stars — daily horoscopes, zodiac sign readings, and a place to ask your astrology questions." />
+  <title>Ask the Stars — Astrology &amp; Daily Horoscopes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ask the Stars home">
+        <span class="brand-mark" aria-hidden="true">&#10022;</span>
+        <span class="brand-name">Ask the Stars</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#horoscope">Horoscopes</a>
+        <a href="#zodiac">Zodiac</a>
+        <a href="#ask">Ask a Question</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Daily horoscopes &amp; zodiac readings</p>
+        <h1>Ask the stars</h1>
+        <p class="hero-lede">
+          Wondering what the week holds for love, career, or money? Read your
+          sign, check today's horoscope, and ask the question that's on your mind.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#ask">Ask a question</a>
+          <a class="button button-outline" href="#zodiac">Explore your sign</a>
+        </div>
+        <p class="hero-note">For entertainment and reflection — always trust your own judgment first.</p>
+      </div>
+    </section>
+
+    <!-- Daily horoscope -->
+    <section class="section" id="horoscope" aria-labelledby="horoscope-heading">
+      <div class="container">
+        <h2 id="horoscope-heading">Today's horoscopes</h2>
+        <p class="section-intro">
+          <span id="today-date">Today</span> — a fresh reading for every sign, updated daily.
+        </p>
+        <div class="horoscope-grid" id="horoscope-grid">
+          <!-- Rendered by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Zodiac -->
+    <section class="section section-alt" id="zodiac" aria-labelledby="zodiac-heading">
+      <div class="container">
+        <h2 id="zodiac-heading">The twelve signs</h2>
+        <p class="section-intro">Tap a sign to see its dates, element, ruling planet, traits, and a short reading.</p>
+        <div class="zodiac-grid" id="zodiac-grid">
+          <!-- Rendered by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Ask a question -->
+    <section class="section" id="ask" aria-labelledby="ask-heading">
+      <div class="container narrow">
+        <h2 id="ask-heading">Ask a question</h2>
+        <p class="section-intro">
+          Share a little context and your question. Birth details help make a
+          reading more personal, but everything except the question itself is optional.
+        </p>
+
+        <form id="question-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="q-name">Name <span class="optional">(optional)</span></label>
+              <input type="text" id="q-name" name="name" autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="q-category">Category</label>
+              <select id="q-category" name="category">
+                <option value="general" selected>General</option>
+                <option value="love">Love</option>
+                <option value="career">Career</option>
+                <option value="money">Money</option>
+                <option value="health">Health</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="q-birthdate">Birth date <span class="optional">(optional)</span></label>
+              <input type="date" id="q-birthdate" name="birthdate" />
+            </div>
+            <div class="field">
+              <label for="q-birthtime">Birth time <span class="optional">(optional)</span></label>
+              <input type="time" id="q-birthtime" name="birthtime" />
+            </div>
+            <div class="field">
+              <label for="q-birthplace">Birth place <span class="optional">(optional)</span></label>
+              <input type="text" id="q-birthplace" name="birthplace" autocomplete="off" placeholder="City, country" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="q-question">Your question</label>
+            <textarea id="q-question" name="question" rows="4" required
+              placeholder="What would you like the stars to weigh in on?"></textarea>
+            <p class="field-error" id="question-error" hidden>Please write your question before sending.</p>
+          </div>
+
+          <button class="button button-gold" type="submit">Send my question</button>
+          <p class="form-note">
+            In this standalone version, your questions are saved in your own browser only,
+            so they stay on this device. Please don't include passwords or sensitive personal details.
+          </p>
+        </form>
+
+        <div class="confirmation" id="confirmation" hidden role="status">
+          <p><strong>Your question is with the stars.</strong> <span id="confirmation-ref"></span></p>
+          <p>It has been saved in your browser. Check the list below to review what you've asked.</p>
+        </div>
+
+        <div class="my-questions" id="my-questions" hidden>
+          <h3>Your questions on this device</h3>
+          <ul id="my-questions-list"></ul>
+          <button class="button button-text" type="button" id="clear-questions">Clear my saved questions</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container narrow">
+        <h2 id="faq-heading">Questions &amp; answers</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How are questions answered?</summary>
+            <p>
+              Each question is read alongside the asker's sign and birth details, when shared,
+              and answered with a short written reading. Answers focus on themes, timing,
+              and things to reflect on — not predictions set in stone.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does an answer take?</summary>
+            <p>
+              Questions are answered in the order they arrive, usually within a few days.
+              Complex questions may take a little longer.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my birth information kept private?</summary>
+            <p>
+              In this standalone version, anything you enter stays in your own browser on
+              your own device — it is not sent to a server. Only share what you're
+              comfortable sharing.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I ask about health, money, or legal matters?</summary>
+            <p>
+              You can ask, but readings here are for entertainment and reflection only.
+              They are not medical, financial, or legal advice. For decisions in those
+              areas, please speak to a qualified professional.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>How is my zodiac sign decided?</summary>
+            <p>
+              By your date of birth, using the tropical zodiac — the system most Western
+              horoscopes use. If you were born near a sign changeover, your birth time
+              and place can pin it down more precisely.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container narrow">
+        <h2 id="about-heading">About Ask the Stars</h2>
+        <p>
+          Ask the Stars is a small corner of the internet for people who like to
+          pause, look up, and wonder. It offers daily horoscopes, short zodiac
+          readings, and a place to ask the questions that horoscopes alone
+          don't answer.
+        </p>
+        <p>
+          Astrology has been practiced for thousands of years as a way of
+          telling stories about timing, character, and change. We keep that
+          spirit: thoughtful, curious, and honest about what a reading can and
+          cannot do.
+        </p>
+        <p>
+          To get in touch, use the ask-a-question form above — it reaches the
+          same place your questions do.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sign detail dialog -->
+  <div class="dialog-backdrop" id="sign-dialog-backdrop" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-sign-name" id="sign-dialog">
+      <button class="dialog-close" type="button" id="dialog-close" aria-label="Close">&times;</button>
+      <p class="dialog-glyph" id="dialog-sign-glyph" aria-hidden="true"></p>
+      <h3 id="dialog-sign-name"></h3>
+      <p class="dialog-dates" id="dialog-sign-dates"></p>
+      <dl class="dialog-facts">
+        <div>
+          <dt>Element</dt>
+          <dd id="dialog-sign-element"></dd>
+        </div>
+        <div>
+          <dt>Ruling planet</dt>
+          <dd id="dialog-sign-ruler"></dd>
+        </div>
+        <div>
+          <dt>Traits</dt>
+          <dd id="dialog-sign-traits"></dd>
+        </div>
+      </dl>
+      <p class="dialog-reading" id="dialog-sign-reading"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Ask the Stars</strong> — for entertainment and reflection only. Not medical, financial, or legal advice.</p>
+      <p class="footer-small">&copy; <span id="footer-year">2026</span> Ask the Stars. Readings are written for general reflection and may not fit every situation.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
