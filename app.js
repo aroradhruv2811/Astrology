@@ -1228,7 +1228,11 @@ function initConsultationForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(new FormData(form)).toString()
     }).then(function (response) {
-      if (!response.ok) throw new Error("Submission failed");
+      /* A redirected response means the POST was turned into a plain page
+         load (e.g. an http page redirecting to https), so the submission
+         never reached the form handler — treat it as a failure rather
+         than showing a false confirmation. */
+      if (!response.ok || response.redirected) throw new Error("Submission failed");
       const questions = loadQuestions();
       const ref = questions.length + 1;
       questions.push({
