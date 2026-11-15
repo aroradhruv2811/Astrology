@@ -1,6 +1,7 @@
 # Ask the Stars
 
-A personal astrology website: professional paid-consultation presentation,
+A personal astrology website based in Burlington, Ontario, Canada, with a
+professional paid-consultation presentation,
 daily, weekly and monthly horoscopes, zodiac sign readings, moon phases,
 Mercury retrograde dates, short articles explaining transits, and a
 consultation request form. Built as a standalone
@@ -42,6 +43,10 @@ static site — no build step, no server required.
 - **FAQ** — how consultations work, payment, timing, privacy, and a clear
   "for entertainment only" note: readings are not medical, financial, or
   legal advice.
+- **Search visibility** — page title, description, canonical URL, and social
+  sharing tags presenting astrology consultations in Burlington, Ontario,
+  Canada; structured data naming Burlington for search engines; plus
+  robots.txt and a sitemap.
 - **About** — a short introduction to the site.
 
 ## Files
@@ -51,6 +56,8 @@ static site — no build step, no server required.
 | `index.html` | Page structure and content |
 | `styles.css` | All styling: lighter night-sky theme (sky-blue gradient, stars, soft clouds, CSS only) with navy and gold accents |
 | `app.js` | Zodiac data, horoscope rotation, moon phases, Mercury retrograde, and the consultation form |
+| `robots.txt` | Allows all search engines to crawl the site and points to the sitemap. |
+| `sitemap.xml` | The site's pages for search engines (currently the homepage). |
 | `README.md` | This file |
 
 ## How to view it
