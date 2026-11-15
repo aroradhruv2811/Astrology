@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ask the Stars — personal astrology consultations, daily, weekly and monthly horoscopes, birth chart and kundali calculators, moon phases, and Mercury retrograde dates." />
+  <meta name="description" content="Ask the Stars — personal astrology consultations, daily, weekly and monthly horoscopes, moon phases, and Mercury retrograde dates." />
   <title>Ask the Stars — Personal Astrology Consultations &amp; Horoscopes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +22,6 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#horoscope">Horoscopes</a>
         <a href="#zodiac">Zodiac</a>
-        <a href="#calculator">Birth Chart</a>
-        <a href="#kundali">Kundali</a>
         <a href="#moon">Moon &amp; Mercury</a>
         <a href="#articles">Articles</a>
         <a href="#ask">Consultation</a>
@@ -196,113 +194,6 @@
       </div>
     </section>
 
-    <!-- Western birth chart calculator -->
-    <section class="section" id="calculator" aria-labelledby="calculator-heading">
-      <div class="container narrow">
-        <h2 id="calculator-heading">Birth chart calculator</h2>
-        <p class="section-intro">
-          Find your Sun, Moon, and rising signs from your birth details, using
-          Western (tropical) astrology. The Sun sign is calculated from your
-          birth date; the Moon and rising signs use simplified calculations and
-          are labelled approximate.
-        </p>
-
-        <form id="birth-chart-form" class="calc-form" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="bc-date">Birth date</label>
-              <input type="date" id="bc-date" name="birthdate" required />
-              <p class="field-error" id="birth-chart-error" hidden>Please enter your birth date.</p>
-            </div>
-            <div class="field">
-              <label for="bc-time">Birth time <span class="optional">(optional — needed for the rising sign)</span></label>
-              <input type="time" id="bc-time" name="birthtime" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="bc-place">Birth place <span class="optional">(optional)</span></label>
-              <input type="text" id="bc-place" name="birthplace" autocomplete="off" placeholder="City, country" />
-            </div>
-            <div class="field">
-              <label for="bc-timezone">Time zone</label>
-              <select id="bc-timezone" name="timezone"></select>
-              <p class="field-hint">Pick the standard or daylight variant that was in force on the birth date.</p>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="bc-lat">Latitude <span class="optional">(optional — improves the rising sign)</span></label>
-              <input type="number" id="bc-lat" name="latitude" step="any" min="-90" max="90" placeholder="e.g. 28.14" />
-            </div>
-            <div class="field">
-              <label for="bc-lon">Longitude <span class="optional">(optional)</span></label>
-              <input type="number" id="bc-lon" name="longitude" step="any" min="-180" max="180" placeholder="e.g. 77.33" />
-            </div>
-          </div>
-          <button class="button button-gold" type="submit">Calculate my chart</button>
-        </form>
-
-        <div id="birth-chart-result" hidden></div>
-      </div>
-    </section>
-
-    <!-- Kundali generator -->
-    <section class="section section-alt" id="kundali" aria-labelledby="kundali-heading">
-      <div class="container narrow">
-        <h2 id="kundali-heading">Kundali generator</h2>
-        <p class="section-intro">
-          Generate an approximate Vedic birth chart (kundali). Kundali uses
-          sidereal astrology, while the birth chart calculator above uses
-          Western (tropical) astrology, so signs can differ between the two.
-        </p>
-
-        <form id="kundali-form" class="calc-form" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="kd-date">Date of birth</label>
-              <input type="date" id="kd-date" name="birthdate" required />
-              <p class="field-error" id="kundali-error" hidden>Please enter the date of birth.</p>
-            </div>
-            <div class="field">
-              <label for="kd-time">Time of birth <span class="optional">(needed for the Lagna)</span></label>
-              <input type="time" id="kd-time" name="birthtime" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="kd-place">Place of birth</label>
-              <input type="text" id="kd-place" name="birthplace" autocomplete="off" placeholder="City, country" />
-            </div>
-            <div class="field">
-              <label for="kd-timezone">Time zone</label>
-              <select id="kd-timezone" name="timezone"></select>
-              <p class="field-hint">Pick the standard or daylight variant that was in force on the birth date.</p>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="kd-lat">Latitude <span class="optional">(optional — improves the Lagna)</span></label>
-              <input type="number" id="kd-lat" name="latitude" step="any" min="-90" max="90" placeholder="e.g. 28.14" />
-            </div>
-            <div class="field">
-              <label for="kd-lon">Longitude <span class="optional">(optional)</span></label>
-              <input type="number" id="kd-lon" name="longitude" step="any" min="-180" max="180" placeholder="e.g. 77.33" />
-            </div>
-          </div>
-          <button class="button button-gold" type="submit">Generate kundali</button>
-          <p class="form-note">
-            Well-known birthplaces are recognised automatically and their real
-            coordinates are used. If a place is not recognised and no
-            coordinates are typed, the Lagna is estimated from the time zone
-            and may be off — the result will say so.
-          </p>
-        </form>
-
-        <div id="kundali-result" hidden></div>
-      </div>
-    </section>
-
     <!-- Moon phases -->
     <section class="section" id="moon" aria-labelledby="moon-heading">
       <div class="container narrow">
@@ -441,9 +332,16 @@
               <label for="q-birthtime">Birth time <span class="optional">(optional)</span></label>
               <input type="time" id="q-birthtime" name="birthtime" />
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="field">
               <label for="q-birthplace">Birth place <span class="optional">(optional)</span></label>
               <input type="text" id="q-birthplace" name="birthplace" autocomplete="off" placeholder="City, country" />
+            </div>
+            <div class="field">
+              <label for="q-state">State <span class="optional">(optional)</span></label>
+              <input type="text" id="q-state" name="state" autocomplete="off" placeholder="State / province" />
             </div>
           </div>
 
@@ -528,24 +426,6 @@
               and place can pin it down more precisely.
             </p>
           </details>
-          <details class="faq-item">
-            <summary>What is the difference between the birth chart calculator and the kundali?</summary>
-            <p>
-              The birth chart calculator uses Western (tropical) astrology, and the
-              kundali uses Vedic (sidereal) astrology. The two systems measure the
-              zodiac from different starting points, so the same birth details can give
-              different signs in each. Both are offered here, and both are approximate.
-            </p>
-          </details>
-          <details class="faq-item">
-            <summary>How accurate are the calculators?</summary>
-            <p>
-              They use simplified astronomical calculations, so results are approximate
-              and labelled as such. Bodies near a sign or nakshatra boundary can flip
-              to the neighbouring sign. A professional reading uses precise ephemeris
-              data and your exact birth time.
-            </p>
-          </details>
         </div>
       </div>
     </section>
@@ -558,7 +438,7 @@
           <p>
             Ask the Stars is a small corner of the internet for people who like to
             pause, look up, and wonder. It offers daily, weekly, and monthly
-            horoscopes, birth chart and kundali calculators, moon phases, and a
+            horoscopes, moon phases, and a
             place to ask the questions that horoscopes alone don't answer — with
             personal written consultations for those who want a reading shaped
             to their own chart.

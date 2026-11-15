@@ -596,8 +596,7 @@ summary:focus-visible {
 }
 
 /* Forms */
-#question-form,
-.calc-form {
+#question-form {
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
@@ -724,76 +723,6 @@ summary:focus-visible {
   color: var(--cream);
 }
 
-/* Calculator results */
-.result-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.result-card {
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-
-.result-card h4 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--gold-400);
-  margin: 0 0 8px;
-}
-
-.result-card p {
-  margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.result-card p:last-child {
-  margin-bottom: 0;
-}
-
-.result-big {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  color: var(--cream);
-}
-
-.result-note {
-  font-size: 0.85rem;
-  color: var(--muted-dark);
-}
-
-.approx-tag {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--navy-950);
-  background: var(--gold-500);
-  border-radius: 999px;
-  padding: 2px 8px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.coord-note,
-.calc-disclaimer {
-  font-size: 0.88rem;
-  color: var(--muted);
-  background: rgba(6, 10, 24, 0.5);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 12px 14px;
-}
-
-.calc-disclaimer {
-  margin-top: 14px;
-}
 
 /* Tables */
 .table-scroll {
@@ -843,74 +772,7 @@ summary:focus-visible {
   font-weight: 500;
 }
 
-.dasha-heading {
-  font-size: 1.2rem;
-  color: var(--gold-400);
-  margin: 22px 0 10px;
-}
 
-.dasha-current td {
-  background: rgba(212, 175, 55, 0.12);
-  color: var(--cream);
-}
-
-/* Kundali chart */
-.chart-wrap {
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 18px;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-.kundali-chart {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.chart-frame {
-  fill: #0b142e;
-  stroke: var(--gold-600);
-  stroke-width: 2;
-}
-
-.chart-line,
-.chart-diamond {
-  fill: none;
-  stroke: var(--gold-600);
-  stroke-width: 1.2;
-}
-
-.chart-sign-number {
-  fill: var(--gold-400);
-  font-size: 12px;
-  font-weight: 600;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
-
-.chart-planet {
-  fill: var(--cream);
-  font-size: 13px;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
-
-.chart-asc {
-  fill: var(--gold-400);
-  font-weight: 700;
-}
-
-.chart-caption {
-  color: var(--muted-dark);
-  font-size: 0.85rem;
-  margin: 12px 0 0;
-  text-align: left;
-}
 
 /* Moon phases */
 .moon-panel {

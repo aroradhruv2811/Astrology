@@ -1,9 +1,9 @@
 # Ask the Stars
 
 A personal astrology website: professional paid-consultation presentation,
-daily, weekly and monthly horoscopes, zodiac sign readings, Western and Vedic
-birth chart calculators, moon phases, Mercury retrograde dates, short articles
-explaining transits, and a consultation request form. Built as a standalone
+daily, weekly and monthly horoscopes, zodiac sign readings, moon phases,
+Mercury retrograde dates, short articles explaining transits, and a
+consultation request form. Built as a standalone
 static site — no build step, no server required.
 
 ## What's on the site
@@ -20,22 +20,6 @@ static site — no build step, no server required.
   sign, its dates, a reading, a mood, and a lucky number.
 - **The twelve signs** — tap any sign for its dates, element, ruling planet,
   traits, and a short reading.
-- **Birth chart calculator** — Western (tropical) astrology. Enter a birth
-  date, time, place, and time zone (familiar abbreviations such as IST, EST,
-  CST, with region and UTC offset, including daylight variants) to get Sun,
-  Moon, and rising signs with short meanings. The Sun sign is calculated from
-  the birth date; Moon and rising use simplified calculations and are
-  labelled approximate.
-- **Kundali generator** — Vedic (sidereal) astrology, separate from the
-  Western calculator, with a note that the two systems can differ. Enter a
-  date, time, and place of birth, a time zone, and optional latitude/longitude
-  to get the Lagna (ascendant), Moon sign (Rashi), Nakshatra with pada and
-  lord, all nine planets by sign and house, a North Indian diamond-style
-  chart, and approximate Vimshottari dasha periods. Well-known birthplaces
-  are recognised automatically and their real coordinates used; otherwise the
-  Lagna falls back to a time-zone-meridian estimate with a plain warning.
-  Without a birth time, the Lagna cannot be determined and houses are not
-  shown.
 - **Moon phases** — tonight's phase name, approximate illumination, Moon age,
   next full and new moon dates, and the next four quarter events, computed
   from the 29.53-day lunar cycle. Approximate.
@@ -48,12 +32,11 @@ static site — no build step, no server required.
   as entertainment and reflection, not prediction or advice.
 - **Request a consultation** — a form collecting name, email, optional phone
   number, category (love, career, money, health, general), optional birth
-  date/time/place, and a description of the situation or question. On submit
+  date/time/place/state, and a description of the situation or question. On submit
   it validates, saves the request in the browser, and confirms that a reply
   will be sent to the visitor's email, with pricing confirmed personally
   first. A "your questions on this device" list shows saved requests.
-- **FAQ** — how consultations work, payment, timing, privacy, the
-  Western/Vedic difference, calculator accuracy, and a clear
+- **FAQ** — how consultations work, payment, timing, privacy, and a clear
   "for entertainment only" note: readings are not medical, financial, or
   legal advice.
 - **About** — a short introduction to the site.
@@ -64,7 +47,7 @@ static site — no build step, no server required.
 | --- | --- |
 | `index.html` | Page structure and content |
 | `styles.css` | All styling: lighter night-sky theme (sky-blue gradient, stars, soft clouds, CSS only) with navy and gold accents |
-| `app.js` | Zodiac data, horoscope rotation, calculators, moon phases, Mercury retrograde, kundali chart, and the consultation form |
+| `app.js` | Zodiac data, horoscope rotation, moon phases, Mercury retrograde, and the consultation form |
 | `README.md` | This file |
 
 ## How to view it
@@ -85,14 +68,8 @@ the visitor to try again.
 
 ## Approximation notes
 
-The calculators use simplified astronomical methods (orbital elements with
-lunar perturbation terms, and a Lahiri ayanamsa approximation for the
-kundali). They were checked against Swiss Ephemeris data for a 1973 test case
-and matched within about a third of a degree, but bodies near a sign or
-nakshatra boundary can flip to the neighbouring sign, and the Lagna depends
-on an accurate birth time and place. Results are labelled approximate
-throughout. A professional reading uses precise ephemeris data and the exact
-birth time. Moon phase times are approximate and can be off by up to a day.
+Moon phase times are approximate and can be off by up to a day. A professional
+reading uses precise ephemeris data and the exact birth time.
 
 ## Disclaimer
 
