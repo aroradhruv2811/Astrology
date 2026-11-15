@@ -9,8 +9,9 @@ static site — no build step, no server required.
 ## What's on the site
 
 - **Ask the stars hero** — a professional first page for a paid consultation
-  service: a clear value proposition (a personal written answer, prepared for
-  you, not from a template), a trust strip stating only service facts, a
+  service: a clear value proposition (a personal consultation — by phone,
+  face to face, or in writing — prepared for you, not from a template), a
+  trust strip stating only service facts, a
   three-step "How it works" section, and a "Readings & services" section with
   three options (Single Question, A Deeper Reading, Birth Chart Reading).
   No prices are shown; pricing is confirmed personally before any payment.
@@ -32,10 +33,12 @@ static site — no build step, no server required.
   as entertainment and reflection, not prediction or advice.
 - **Request a consultation** — a form collecting name, email, optional phone
   number, category (love, career, money, health, general), optional birth
-  date/time/place/state, and a description of the situation or question. On submit
-  it validates, saves the request in the browser, and confirms that a reply
-  will be sent to the visitor's email, with pricing confirmed personally
-  first. A "your questions on this device" list shows saved requests.
+  date/time/place/state, preferred way to consult (phone call, face to face,
+  or written answer by email), and a description of the situation or question.
+  On submit it validates, sends the request through Netlify Forms, saves a
+  copy in the browser, and confirms that the astrologer will be in touch to
+  arrange the consultation, with pricing confirmed personally first. A "your
+  questions on this device" list shows saved requests.
 - **FAQ** — how consultations work, payment, timing, privacy, and a clear
   "for entertainment only" note: readings are not medical, financial, or
   legal advice.

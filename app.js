@@ -508,9 +508,10 @@ function renderMyQuestions() {
   list.innerHTML = questions.map(function (q) {
     const date = formatDateShort(new Date(q.askedAt));
     const who = q.name ? " — " + escapeHtml(q.name) : "";
+    const mode = q.consultationMode ? " &middot; " + escapeHtml(q.consultationMode) : "";
     return (
       "<li><div class='q-meta'>#" + q.ref + " &middot; " + escapeHtml(q.category) +
-      " &middot; " + date + who + " &middot; Awaiting answer</div>" +
+      " &middot; " + date + who + mode + " &middot; Awaiting answer</div>" +
       "<p class='q-text'>" + escapeHtml(q.description) + "</p></li>"
     );
   }).join("");
@@ -528,6 +529,7 @@ function initConsultationForm() {
   const nameInput = document.getElementById("q-name");
   const emailInput = document.getElementById("q-email");
   const phoneInput = document.getElementById("q-phone");
+  const modeSelect = document.getElementById("q-mode");
   const descInput = document.getElementById("q-question");
   const confirmation = document.getElementById("confirmation");
 
@@ -541,6 +543,7 @@ function initConsultationForm() {
     const phone = phoneInput.value.trim();
     const phoneValid = phone === "" || (/^[+0-9][0-9+\s-]*$/.test(phone) && phone.replace(/\D/g, "").length >= 7);
     ok = showFieldError(phoneInput, document.getElementById("phone-error"), !phoneValid) && ok;
+    ok = showFieldError(modeSelect, document.getElementById("mode-error"), !modeSelect.value) && ok;
     const description = descInput.value.trim();
     ok = showFieldError(descInput, document.getElementById("question-error"), !description) && ok;
     if (!ok) {
@@ -576,6 +579,7 @@ function initConsultationForm() {
         email: email,
         phone: phone,
         category: document.getElementById("q-category").value,
+      consultationMode: modeSelect.value,
         birthdate: document.getElementById("q-birthdate").value,
         birthtime: document.getElementById("q-birthtime").value,
         birthplace: document.getElementById("q-birthplace").value.trim(),

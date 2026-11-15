@@ -38,8 +38,9 @@
         <p class="hero-eyebrow">Personal astrology consultations</p>
         <h1>Ask the stars</h1>
         <p class="hero-lede">
-          A personal written answer to the question on your mind — prepared for
-          you, from your own birth details, not pulled from a template.
+          A personal consultation about the question on your mind — by phone,
+          face to face, or in writing — prepared for you from your own birth
+          details, not pulled from a template.
         </p>
         <div class="hero-actions">
           <a class="button button-gold" href="#ask">Request a consultation</a>
@@ -94,10 +95,10 @@
     <!-- Trust strip -->
     <div class="trust-strip">
       <div class="container trust-strip-inner">
-        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Answers written personally</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Personal one-to-one consultations</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> By phone, face to face, or in writing</p>
         <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Your details stay confidential</p>
-        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Answered in the order received</p>
-        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Usually within a few days</p>
+        <p><span class="trust-icon" aria-hidden="true">&#10022;</span> Pricing confirmed personally first</p>
       </div>
     </div>
 
@@ -105,22 +106,22 @@
     <section class="section" id="how" aria-labelledby="how-heading">
       <div class="container">
         <h2 id="how-heading">How it works</h2>
-        <p class="section-intro">Three simple steps between your question and a personal answer.</p>
+        <p class="section-intro">Three simple steps to a personal consultation.</p>
         <ol class="steps">
           <li class="step-card">
             <span class="step-number" aria-hidden="true">1</span>
             <h3>Ask your question</h3>
-            <p>Use the consultation form to share your question, your birth details, and how to reach you.</p>
+            <p>Use the consultation form to share your question, your birth details, how you'd like to consult, and how to reach you.</p>
           </li>
           <li class="step-card">
             <span class="step-number" aria-hidden="true">2</span>
-            <h3>Your reading is prepared</h3>
-            <p>Your question is read alongside your sign and birth details, and a written reading is prepared for you personally.</p>
+            <h3>Your consultation is arranged</h3>
+            <p>Your question is read alongside your sign and birth details, and your consultation is arranged personally — by phone, face to face, or in writing, as you prefer.</p>
           </li>
           <li class="step-card">
             <span class="step-number" aria-hidden="true">3</span>
-            <h3>Your personal answer is delivered</h3>
-            <p>The answer comes back to you by email — focused on themes, timing, and things to reflect on.</p>
+            <h3>You talk it through, personally</h3>
+            <p>Your consultation happens the way you chose — a phone call, a face-to-face conversation, or a written reading — focused on themes, timing, and things to reflect on.</p>
           </li>
         </ol>
       </div>
@@ -134,21 +135,21 @@
         <div class="services-grid">
           <article class="service-card">
             <h3>Single Question</h3>
-            <p>One question, one personal written answer. Share as much or as little context as you like, with your birth details if you want the answer shaped to your chart.</p>
+            <p>One question, answered personally — by phone, face to face, or in writing. Share as much or as little context as you like, with your birth details if you want the answer shaped to your chart.</p>
             <ul>
-              <li>One question, answered in writing</li>
+              <li>One question, answered personally</li>
               <li>Birth details optional</li>
-              <li>Delivered by email, usually within a few days</li>
+              <li>By phone, face to face, or in writing — you choose</li>
             </ul>
             <a class="button button-gold" href="#ask">Choose this reading</a>
           </article>
           <article class="service-card">
             <h3>A Deeper Reading</h3>
-            <p>A longer written reading that explores one area of your life in depth — love, career, money, health, or whatever matters most right now — drawing on your birth details.</p>
+            <p>A longer personal reading that explores one area of your life in depth — love, career, money, health, or whatever matters most right now — drawing on your birth details.</p>
             <ul>
               <li>One area of life, explored in depth</li>
               <li>Uses your birth date, time, and place</li>
-              <li>Delivered by email, usually within a few days</li>
+              <li>By phone, face to face, or in writing — you choose</li>
             </ul>
             <a class="button button-gold" href="#ask">Choose this reading</a>
           </article>
@@ -158,7 +159,7 @@
             <ul>
               <li>Full chart, read as a whole</li>
               <li>Needs your birth date, time, and place</li>
-              <li>Delivered by email, usually within a few days</li>
+              <li>By phone, face to face, or in writing — you choose</li>
             </ul>
             <a class="button button-gold" href="#ask">Choose this reading</a>
           </article>
@@ -282,9 +283,9 @@
       <div class="container narrow">
         <h2 id="ask-heading">Request a consultation</h2>
         <p class="section-intro">
-          Tell us about yourself and your question. Pricing is confirmed with
-          you personally before any payment, and a reply will be sent to your
-          email address.
+          Tell us about yourself and your question, and how you'd like to
+          consult — by phone, face to face, or with a written answer.
+          Pricing is confirmed with you personally before any payment.
         </p>
 
         <form id="question-form" name="consultation" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
@@ -345,6 +346,20 @@
             </div>
           </div>
 
+          <div class="form-row">
+            <div class="field">
+              <label for="q-mode">How would you like to consult?</label>
+              <select id="q-mode" name="consultation_mode" required>
+                <option value="" selected>Select an option</option>
+                <option value="Phone call">Phone call</option>
+                <option value="Face to face">Face to face</option>
+                <option value="Written answer by email">Written answer by email</option>
+              </select>
+              <p class="field-error" id="mode-error" hidden>Please choose how you'd like to consult.</p>
+              <p class="field-hint">If you choose a phone call, please add your phone number above so the astrologer can reach you.</p>
+            </div>
+          </div>
+
           <div class="field">
             <label for="q-question">Describe your situation or question</label>
             <textarea id="q-question" name="question" rows="4" required
@@ -363,7 +378,7 @@
 
         <div class="confirmation" id="confirmation" hidden role="status">
           <p><strong>Your consultation request has been received.</strong> <span id="confirmation-ref"></span></p>
-          <p>A reply will be sent to <span id="confirmation-email"></span> — pricing is confirmed with you personally first, and answers usually arrive within a few days.</p>
+          <p>We'll be in touch at <span id="confirmation-email"></span> to arrange your consultation — pricing is confirmed with you personally first.</p>
         </div>
 
         <div class="my-questions" id="my-questions" hidden>
@@ -380,11 +395,12 @@
         <h2 id="faq-heading">Questions &amp; answers</h2>
         <div class="faq-list">
           <details class="faq-item">
-            <summary>How are consultations answered?</summary>
+            <summary>How do consultations work?</summary>
             <p>
-              Each request is read alongside the asker's sign and birth details, when shared,
-              and answered with a short written reading. Answers focus on themes, timing,
-              and things to reflect on — not predictions set in stone.
+              You choose how you'd like to consult — by phone call, face to face, or with
+              a written answer. Each request is read alongside the asker's sign and birth
+              details, when shared. Consultations focus on themes, timing, and things to
+              reflect on — not predictions set in stone.
             </p>
           </details>
           <details class="faq-item">
@@ -396,18 +412,19 @@
             </p>
           </details>
           <details class="faq-item">
-            <summary>How long does an answer take?</summary>
+            <summary>How long does it take to hear back?</summary>
             <p>
-              Requests are answered in the order they arrive, usually within a few days.
-              Complex questions may take a little longer.
+              Requests are handled in the order they arrive, usually within a few days.
+              Phone and face-to-face consultations are arranged personally after your
+              request; written answers for complex questions may take a little longer.
             </p>
           </details>
           <details class="faq-item">
             <summary>Is my birth information kept private?</summary>
             <p>
-              In this standalone version, anything you enter stays in your own browser on
-              your own device — it is not sent to a server. Only share what you're
-              comfortable sharing.
+              Your details are sent to the astrologer so your consultation can be
+              arranged, and are kept confidential — they are not shared or published.
+              Only share what you're comfortable sharing.
             </p>
           </details>
           <details class="faq-item">
@@ -440,8 +457,8 @@
             pause, look up, and wonder. It offers daily, weekly, and monthly
             horoscopes, moon phases, and a
             place to ask the questions that horoscopes alone don't answer — with
-            personal written consultations for those who want a reading shaped
-            to their own chart.
+            personal consultations — by phone, face to face, or in writing —
+            for those who want a reading shaped to their own chart.
           </p>
           <p>
             Astrology has been practiced for thousands of years as a way of
