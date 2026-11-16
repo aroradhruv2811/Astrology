@@ -83,7 +83,8 @@
             </clipPath>
           </defs>
           <ellipse cx="280" cy="168" rx="262" ry="96" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-dasharray="3 6" />
-          <circle cx="72" cy="46" r="26" fill="#f6e7b8" mask="url(#moon-mask)" />
+          <g class="drift drift-moon"><circle cx="72" cy="46" r="26" fill="#f6e7b8" mask="url(#moon-mask)" /></g>
+          <g class="drift drift-sun">
           <g stroke="#e8c766" stroke-width="2" stroke-linecap="round">
             <line x1="492" y1="8" x2="492" y2="16" />
             <line x1="492" y1="58" x2="492" y2="66" />
@@ -95,19 +96,24 @@
             <line x1="475" y1="55" x2="470" y2="60" />
           </g>
           <circle cx="492" cy="37" r="20" fill="#e8c766" />
-          <circle cx="168" cy="98" r="8" fill="#b8a894" />
-          <circle cx="226" cy="112" r="12" fill="#ecd9ac" />
-          <circle cx="298" cy="120" r="10" fill="#c96f4a" />
+          </g>
+          <circle class="drift drift-mercury" cx="168" cy="98" r="8" fill="#b8a894" />
+          <circle class="drift drift-venus" cx="226" cy="112" r="12" fill="#ecd9ac" />
+          <circle class="drift drift-mars" cx="298" cy="120" r="10" fill="#c96f4a" />
+          <g class="drift drift-jupiter">
           <g clip-path="url(#jup-clip)">
             <circle cx="368" cy="106" r="18" fill="#d9a878" />
             <rect x="350" y="100" width="36" height="4" fill="#b9835a" opacity="0.8" />
             <rect x="350" y="110" width="36" height="3" fill="#e8c49a" opacity="0.8" />
           </g>
           <circle cx="368" cy="106" r="18" fill="none" stroke="#e8c49a" stroke-width="1" opacity="0.5" />
+          </g>
+          <g class="drift drift-saturn">
           <ellipse cx="446" cy="88" rx="26" ry="8" fill="none" stroke="#e8d9a8" stroke-width="3" transform="rotate(-18 446 88)" />
           <circle cx="446" cy="88" r="13" fill="#e3cf9e" />
           <ellipse cx="446" cy="88" rx="26" ry="8" fill="none" stroke="#f6e7b8" stroke-width="1.5" transform="rotate(-18 446 88)" opacity="0.7" />
-          <g fill="#ffffff" opacity="0.9">
+          </g>
+          <g class="hero-sparkles" fill="#ffffff" opacity="0.9">
             <path d="M120 30 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z" />
             <path d="M262 60 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5 -4 -4 -1.5 4 -1.5 z" />
             <path d="M410 52 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5 -4 -4 -1.5 4 -1.5 z" />
