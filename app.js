@@ -1,6 +1,6 @@
 /* Ask the Stars — zodiac data, horoscopes, moon phases,
    Mercury retrograde, and the consultation form.
-   Readings are for entertainment and reflection only. */
+   Readings are for reflection only. */
 
 "use strict";
 

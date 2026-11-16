@@ -31,7 +31,7 @@ static site — no build step, no server required.
 - **Understanding transits** — six short articles: What is a transit?,
   Mercury retrograde explained, Saturn return, Jupiter transits, Venus
   retrograde, and Full Moon vs New Moon. Accurate general concepts, framed
-  as entertainment and reflection, not prediction or advice.
+  as reflection, not prediction or advice.
 - **Request a consultation** — a form collecting name, email, optional phone
   number, category (love, career, money, health, general), optional birth
   date/time/place/state, preferred way to consult (phone call, face to face,
@@ -41,8 +41,8 @@ static site — no build step, no server required.
   arrange the consultation, with pricing confirmed personally first. A "your
   questions on this device" list shows saved requests.
 - **FAQ** — how consultations work, payment, timing, privacy, and a clear
-  "for entertainment only" note: readings are not medical, financial, or
-  legal advice.
+  note that readings are for reflection only and are not medical, financial,
+  or legal advice.
 - **Search visibility** — page title, description, canonical URL, and social
   sharing tags presenting astrology consultations in Burlington, Ontario,
   Canada; structured data naming Burlington for search engines; plus
@@ -83,6 +83,6 @@ reading uses precise ephemeris data and the exact birth time.
 
 ## Disclaimer
 
-Readings on this site are for entertainment and reflection only. They are not
+Readings on this site are for reflection only. They are not
 medical, financial, or legal advice. Always trust your own judgment — and a
 qualified professional — for important decisions.
