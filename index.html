@@ -46,7 +46,6 @@
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#horoscope">Horoscopes</a>
-        <a href="#zodiac">Zodiac</a>
         <a href="#moon">Moon &amp; Mercury</a>
         <a href="#articles">Articles</a>
         <a href="#ask">Consultation</a>
@@ -210,17 +209,6 @@
           <button type="button" class="period-tab" role="tab" data-period="monthly" aria-selected="false">Monthly</button>
         </div>
         <div class="horoscope-grid" id="horoscope-grid">
-          <!-- Rendered by app.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Zodiac -->
-    <section class="section section-alt" id="zodiac" aria-labelledby="zodiac-heading">
-      <div class="container">
-        <h2 id="zodiac-heading">The twelve signs</h2>
-        <p class="section-intro">Tap a sign to see its dates, element, ruling planet, traits, and a short reading.</p>
-        <div class="zodiac-grid" id="zodiac-grid">
           <!-- Rendered by app.js -->
         </div>
       </div>
@@ -482,58 +470,24 @@
     <!-- About -->
     <section class="section section-alt" id="about" aria-labelledby="about-heading">
       <div class="container narrow">
-        <h2 id="about-heading">About Ask the Stars</h2>
+        <h2 id="about-heading">About the Astrologer</h2>
         <div class="about-panel">
           <p>
-            Ask the Stars is a small corner of the internet for people who like to
-            pause, look up, and wonder. It offers daily, weekly, and monthly
-            horoscopes, moon phases, and a
-            place to ask the questions that horoscopes alone don't answer — with
-            personal consultations — by phone, face to face, or in writing —
-            for those who want a reading shaped to their own chart. Ask the
-            Stars is based in Burlington, Ontario, Canada: face-to-face
-            consultations take place in Burlington, and phone and written
-            consultations can be arranged from anywhere.
+            Hello, and welcome — I'm Mamta, a Vedic astrologer in Burlington, Ontario. 💛
           </p>
           <p>
-            Astrology has been practiced for thousands of years as a way of
-            telling stories about timing, character, and change. We keep that
-            spirit: thoughtful, curious, and honest about what a reading can and
-            cannot do.
+            My work begins where the old books do: with your own birth chart — the sky exactly as it stood at the moment you were born — and with the timeless wisdom of the classical texts, from the Brihat Parashara Hora Shastra to the Phaladeepika. No templates, no computer printouts. Every reading is prepared by hand, just for you.
           </p>
           <p>
-            To get in touch, use the consultation form above — it reaches the
-            same place your questions do.
+            Whether you carry one question close to your heart, or you wish to understand the whole map of your life — your career, your family, your children, your next big decision — we will look at it together, gently and honestly. The stars incline, they never compel — and my promise is simple: clear guidance, kind words, and complete privacy. Everything you share stays between us, always.
+          </p>
+          <p>
+            You can meet me by phone, face to face here in Burlington, or in writing — whichever feels most comfortable to you. Begin with a question close to your heart, and let the stars speak. ✨
           </p>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Sign detail dialog -->
-  <div class="dialog-backdrop" id="sign-dialog-backdrop" hidden>
-    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-sign-name" id="sign-dialog">
-      <button class="dialog-close" type="button" id="dialog-close" aria-label="Close">&times;</button>
-      <p class="dialog-glyph" id="dialog-sign-glyph" aria-hidden="true"></p>
-      <h3 id="dialog-sign-name"></h3>
-      <p class="dialog-dates" id="dialog-sign-dates"></p>
-      <dl class="dialog-facts">
-        <div>
-          <dt>Element</dt>
-          <dd id="dialog-sign-element"></dd>
-        </div>
-        <div>
-          <dt>Ruling planet</dt>
-          <dd id="dialog-sign-ruler"></dd>
-        </div>
-        <div>
-          <dt>Traits</dt>
-          <dd id="dialog-sign-traits"></dd>
-        </div>
-      </dl>
-      <p class="dialog-reading" id="dialog-sign-reading"></p>
-    </div>
-  </div>
 
   <footer class="site-footer">
     <div class="container">

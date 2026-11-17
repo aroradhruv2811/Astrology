@@ -20,8 +20,6 @@ static site — no build step, no server required.
   readings rotate by date, weekly readings stay the same within a calendar
   week, and monthly readings within a calendar month. Each card shows the
   sign, its dates, a reading, a mood, and a lucky number.
-- **The twelve signs** — tap any sign for its dates, element, ruling planet,
-  traits, and a short reading.
 - **Moon phases** — tonight's phase name, approximate illumination, Moon age,
   next full and new moon dates, and the next four quarter events, computed
   from the 29.53-day lunar cycle. Approximate.

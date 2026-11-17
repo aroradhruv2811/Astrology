@@ -362,59 +362,6 @@ function initHoroscopeTabs() {
   renderHoroscopes();
 }
 
-/* ---------- Zodiac grid + detail dialog ---------- */
-
-let lastFocusedCard = null;
-
-function renderZodiacGrid() {
-  const grid = document.getElementById("zodiac-grid");
-  grid.innerHTML = SIGNS.map(function (sign, i) {
-    return "<button type='button' class='zodiac-card' data-sign='" + i + "'>" +
-      "<span class='glyph' aria-hidden='true'>" + sign.glyph + VS + "</span>" +
-      "<span class='sign-name'>" + escapeHtml(sign.name) + "</span>" +
-      "<span class='sign-dates'>" + escapeHtml(sign.dates) + "</span>" +
-    "</button>";
-  }).join("");
-
-  grid.addEventListener("click", function (event) {
-    const card = event.target.closest(".zodiac-card");
-    if (card) openDialog(Number(card.dataset.sign), card);
-  });
-}
-
-function openDialog(signIndex, card) {
-  const sign = SIGNS[signIndex];
-  const reading = readingFor(signIndex, "daily", new Date());
-  document.getElementById("dialog-sign-glyph").textContent = sign.glyph + VS;
-  document.getElementById("dialog-sign-name").textContent = sign.name;
-  document.getElementById("dialog-sign-dates").textContent = sign.dates;
-  document.getElementById("dialog-sign-element").textContent = sign.element;
-  document.getElementById("dialog-sign-ruler").textContent = sign.ruler;
-  document.getElementById("dialog-sign-traits").textContent = sign.traits;
-  document.getElementById("dialog-sign-reading").textContent = reading.text;
-  lastFocusedCard = card || null;
-  document.getElementById("sign-dialog-backdrop").hidden = false;
-  document.getElementById("dialog-close").focus();
-}
-
-function closeDialog() {
-  document.getElementById("sign-dialog-backdrop").hidden = true;
-  if (lastFocusedCard) lastFocusedCard.focus();
-}
-
-function initDialog() {
-  document.getElementById("dialog-close").addEventListener("click", closeDialog);
-  document.getElementById("sign-dialog-backdrop").addEventListener("click", function (event) {
-    if (event.target.id === "sign-dialog-backdrop") closeDialog();
-  });
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !document.getElementById("sign-dialog-backdrop").hidden) {
-      closeDialog();
-    }
-  });
-}
-
-
 /* ---------- Moon phases ---------- */
 
 function moonSvg(info) {
@@ -617,8 +564,6 @@ function initConsultationForm() {
 if (typeof document !== "undefined") {
   document.getElementById("footer-year").textContent = String(new Date().getFullYear());
   initHoroscopeTabs();
-  renderZodiacGrid();
-  initDialog();
   renderMoonPhases();
   renderMercury();
   initConsultationForm();
